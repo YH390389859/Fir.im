@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fir.im - 免费应用内测托管平台|iOS应用Beta测试分发|Android应用内测分发</title>
+    <link rel="icon" href="123"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font-icon.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="icon" href="img/icon.png">
+    <script src="js/loadPage-firstPage.js"></script>
+</head>
+<body>
+    <header id="navbar">
+        <div id="left-logo">
+            <a href="#"></a>
+        </div>
+        <div id="right-tag">
+            <span>&#xe613;</span>
+            <ul>
+                <li>
+                    <a href="#">首页</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="#">价格</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="#">文档</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="#">工具</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="#">帮助中心</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="#">登录</a>
+                    <i></i>
+                </li>
+                <li>
+                    <a href="#">注册</a>
+                </li>
+            </ul>
+            <span>&#xe617;</span>
+        </div>
+    </header>
+    <article>
+        <!--页面载入动画(动态图消失,背景变大)-->
+        <section id="load-page"><!--网页加载动画-->
+            <div>
+                <span></span>
+            </div>
+        </section>
+        <section id="first-page">
+            <div id="plane">
+                <img id="plane-body" src="svg/plane.svg">
+                <img id="propeller" src="svg/propeller.svg">
+            </div>
+            <div id="Typewriter">
+                <pre id="pre"></pre>
+            </div>
+        </section>
+        <section id="second-page">
+            <div class="left">
+                <div>
+                    <i></i>
+                    <p>内测托管</p>
+                    <span>一键上传应用,扫描二维码下载</span>
+                </div>
+            </div>
+            <div class="middle">
+                <div>
+                    <i></i>
+                    <p>应用合并</p>
+                    <span>扫描同一个二维码,根据设备类型自动下载对应的iOS</span>
+                    <span>或Android应用</span>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <i></i>
+                    <p>内测托管</p>
+                    <span>fir-cli可以通过命令行查看、上传、变异、打包应用</span>
+                </div>
+            </div>
+        </section>
+        <section id="fourth-page">
+            <div id="allBox">
+                <header>Utility Tools</header>
+                <div id="box1" class="box">
+                    <div class="words">
+                        <span>让测试用户快速获取 UDID 并发送给开发者</span>
+                        <i>&#xe61d</i>
+                    </div>
+                    <div class="Box-detail">
+                        <div class="boxsize B-face">&#xe642</div>
+                        <div class="boxsize B-back"></div>
+                        <div class="boxsize B-left"></div>
+                        <div class="boxsize B-right">GET</br>UDID</div>
+                        <div class="boxsize B-top-R"></div>
+                        <div class="boxsize B-top-L"></div>
+                    </div>
+                </div>
+                <div id="box2" class="box">
+                    <div class="words">
+                        <span>读取手机日志，快速定位无法安装的原因</span>
+                        <i>&#xe61d</i>
+                    </div>
+                    <div class="Box-detail">
+                        <div class="boxsize B-face">&#xe640</div>
+                        <div class="boxsize B-back"></div>
+                        <div class="boxsize B-left"></div>
+                        <div class="boxsize B-right">LOG</br>GURU</div>
+                        <div class="boxsize B-top-R"></div>
+                        <div class="boxsize B-top-L"></div>
+                    </div>
+                </div>
+                <div id="box3" class="box">
+                    <div class="words">
+                        <span>添加 SDK，灵活实现应用的检测更新功能</span>
+                        <i>&#xe61d</i>
+                    </div>
+                    <div class="Box-detail">
+                        <div class="boxsize B-face">&#xe643</div>
+                        <div class="boxsize B-back"></div>
+                        <div class="boxsize B-left"></div>
+                        <div class="boxsize B-right">AUTO-</br>UPDATE</div>
+                        <div class="boxsize B-top-R"></div>
+                        <div class="boxsize B-top-L"></div>
+                    </div>
+                </div>
+                <div id="box4" class="box">
+                    <div class="words">
+                        <span>快速检测本机在 fir.im 的上传下载速度</span>
+                        <i>&#xe61d</i>
+                    </div>
+                    <div class="Box-detail">
+                        <div class="boxsize B-face">&#xe641</div>
+                        <div class="boxsize B-back"></div>
+                        <div class="boxsize B-left"></div>
+                        <div class="boxsize B-right">SPEED</br>TEST</div>
+                        <div class="boxsize B-top-R"></div>
+                        <div class="boxsize B-top-L"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="third-page">
+            <div class="left">
+                <div>
+                    <i></i>
+                    <p>权限控制</p>
+                    <span>灵活的访问权限控制，可添加团队成员</span>
+                    <span>共同上传、管理应用</span>
+                </div>
+            </div>
+            <div class="middle">
+                <div>
+                    <i></i>
+                    <p>开放 API</p>
+                    <span>使用 fir.im 的 API 接口可以方便搭建</span>
+                    <span>Jenkins 等自动集成的系统</span>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <i></i>
+                    <p>Web Hooks</p>
+                    <span>应用更新时团队成员会收到更新邮件，添加Web Hooks的第三方平台也会有更新消息提醒。（已支持 Slack、简聊、BearyChat、纷云、瀑布 IM等）</span>
+                </div>
+            </div>
+        </section>
+        <section id="fifth-page">
+            <header>What Our Users Say</header>
+            <div id="userIcon">
+                <span>&#xe90b</span>
+                <span>&#xe60d</span>
+                <span>&#xe908</span>
+                <span>&#xe90a</span>
+                <span>&#xe909</span>
+            </div>
+            <div id="userSay">
+                <p>就像送自己的孩子去托儿所一样，安全、便捷，fir.im 将我们这些“父母”从发包内测中解放！期待越办越好，小美会一如既往支持 fir.im！</p>
+                <p>节操精选的公司内部测试到小范围用户群灰度测试，fir.im 极大方便帮我们解决了安装包传输的问题；安全放心、操作便捷、界面简洁！</p>
+                <p>fir.im 解决了京东阅读客户端每日测试发布的难题，大大减轻了跨地域开发测试的难度，fir.im 加油！</p>
+                <p>e 保养一直在用 fir.im 进行测试托管分发，喜欢 fir.im 的 UI 和用户体验设计，硅谷范儿的产品！</p>
+                <p>fir.im 与下厨房一样，都在 UI 和 UE 上下功夫，将开发者工具做到简洁极致，提高效率的同时也令人赏心悦目。</p>
+            </div>
+        </section>
+        <section id="sixth-page">
+            <div id="TypewriterDown2">
+                <!--<i>&#xe645</i>-->
+                <!--<i>&#xe644</i>-->
+                <!--<i>&#xe60e</i>-->
+                <!--<i>&nbsp;</i>-->
+                <!--<i>&#xe60f</i>-->
+                <!--<i>&#xe645</i>-->
+                <!--<i>&#xe646</i>-->
+            </div>
+            <div id="Likes" >
+                <div class="Likes1">&#xe613</div>
+                <div class="Likes2">
+                    <span>&#xe615</span>
+                    <div id="smile">
+                        <span>&#xe644</span>
+                        <span>&#xe644</span>
+                        <span>&#xe619</span>
+                    </div>
+                </div>
+                <div class="Likes3">&#xe617</div>
+            </div>
+        </section>
+        <script src="js/firstPage-secondPage.js"></script>
+        <script src="js/fifth_mouseevent.js"></script>
+    </article>
+</body>
+</html>

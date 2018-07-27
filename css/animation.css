@@ -1,0 +1,463 @@
+/********加载页面变大动画*******/
+.bigger{
+    animation: bigger 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in ;
+}
+@keyframes bigger {
+    from{
+
+    }
+    to{
+        width: 10000px;
+        height: 10000px;
+    }
+}
+/***********飞机动画***********/
+/*螺旋桨动画*/
+@keyframes rotate {
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+/*飞机进入动画*/
+@keyframes planein {
+    from{
+        opacity: 0;
+        left: 100%;
+        width: 0;
+    }
+    to{
+        opacity: 1;
+        left: 50%;
+        width: 50%;
+    }
+}
+/*进入以后移动动画*/
+@keyframes planemove {
+    from{
+        top: 50%;
+        left: 50%;
+    }
+    25%{
+        top: 47%;
+        left: 47%;
+    }
+    50%{
+        top: 50%;
+        left: 50%;
+    }
+    75%{
+        top: 53%;
+        left: 53%;
+    }
+    to{
+        top: 50%;
+        left: 50%;
+    }
+}
+/*关闭第一个页面之前飞机消失*/
+@keyframes planegone {
+    25%{
+        width: 40%;
+        left: 60%;
+    }
+    to{
+        width: 50%;
+        left: -50%;;
+    }
+}
+.planegone{
+    animation: planegone 1s both linear ;
+    animation-fill-mode: forwards;
+}
+.planein{
+    animation: planein 0.5s;
+    animation-fill-mode: forwards;
+}
+.planemove{
+    animation: planemove 10s both linear infinite;
+    animation-fill-mode: forwards;
+}
+/********************第一个页面转第二个页面是反转效果************************/
+/*左中右内容设置为透明,背景色黄色,旋转180度后瞬间旋转180度,改变背景色,内容设置为不透明*/
+@keyframes secondRotate1 {
+    from{
+        background-color: #ffd200;
+        transform: rotateY(180deg);
+    }
+    50%{
+        background-color: #ffd200;
+    }
+    50.1%{
+        background-color: #05abbf;
+    }
+    to{
+        transform: rotateY(0deg);
+        background-color: #05abbf;
+    }
+}
+.secondRotate1{
+    animation: secondRotate1 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes secondRotate2 {
+    from{
+        background-color: #ffd200;
+        transform: rotateY(180deg);
+    }
+    50%{
+        background-color: #ffd200;
+    }
+    50.1%{
+        background-color: #5e5ae2;
+    }
+    to{
+        transform: rotateY(0deg);
+        background-color: #5e5ae2;
+    }
+}
+.secondRotate2{
+    animation: secondRotate2 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes secondRotate3 {
+    from{
+        background-color: #ffd200;
+        transform: rotateY(180deg);
+    }
+    50%{
+        background-color: #ffd200;
+    }
+    50.1%{
+        background-color: #363b3d;
+    }
+    to{
+        transform: rotateY(0deg);
+        background-color: #363b3d;
+    }
+}
+.secondRotate3{
+    animation: secondRotate3 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+/********************第二个页面转第一个页面时反转效果************************/
+@keyframes second_reverse_Rotate1 {
+    from{
+        transform: rotateY(0deg);
+        background-color: #05abbf;
+    }
+    50%{
+        background-color: #05abbf;
+    }
+    50.1%{
+        background-color: #ffd200;
+    }
+    to{
+        background-color: #ffd200;
+        transform: rotateY(180deg);
+    }
+}
+.second_reverse_Rotate1{
+    animation: second_reverse_Rotate1 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes second_reverse_Rotate2 {
+    from{
+        transform: rotateY(0deg);
+        background-color: #5e5ae2;
+    }
+    50%{
+        background-color: #5e5ae2;
+    }
+    50.1%{
+        background-color: #ffd200;
+    }
+    to{
+        background-color: #ffd200;
+        transform: rotateY(180deg);
+    }
+}
+.second_reverse_Rotate2{
+    animation: second_reverse_Rotate2 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes second_reverse_Rotate3 {
+    from{
+        transform: rotateY(0deg);
+        background-color: #363b3d;
+    }
+    50%{
+        background-color: #363b3d;
+    }
+    50.1%{
+        background-color: #ffd200;
+    }
+    to{
+        background-color: #ffd200;
+        transform: rotateY(180deg);
+    }
+}
+.second_reverse_Rotate3{
+    animation: second_reverse_Rotate3 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+
+/********************第二个页面转第三个页面时反转效果************************/
+@keyframes thirdSlide1 {
+    from{
+        top: 100%;
+    }
+    to{
+        top: 0;
+    }
+}
+.thirdSlide1{
+    animation: thirdSlide1 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes thirdSlide2 {
+    from{
+        top: -100%;
+    }
+    to{
+        top: 0;
+    }
+}
+.thirdSlide2{
+    animation: thirdSlide2 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes thirdSlide3 {
+    from{
+        top: 100%;
+    }
+    to{
+        top: 0;
+    }
+}
+.thirdSlide3{
+    animation: thirdSlide3 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+/********************第三个页面转第二个页面时反转效果************************/
+@keyframes third_reverse_Slide1 {
+    from{
+        top: 0;
+    }
+    to{
+        top: 100%;
+    }
+}
+.third_reverse_Slide1{
+    animation: third_reverse_Slide1 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes third_reverse_Slide2 {
+    from{
+        top: 0;
+    }
+    to{
+        top: -100%;
+    }
+}
+.third_reverse_Slide2{
+    animation: third_reverse_Slide2 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes third_reverse_Slide3 {
+    from{
+        top: 0;
+    }
+    to{
+        top: 100%;
+    }
+}
+.third_reverse_Slide3{
+    animation: third_reverse_Slide3 0.3s both linear ;
+    animation-fill-mode: forwards;
+}
+/******第三页面跳转第四页面时第三页面三个模块顺序向上移动动画*******/
+@keyframes sequential_upward {
+    from{
+        margin-top: 0;
+    }
+    to{
+        margin-top: -100%;
+    }
+}
+.sequential_upward{
+    animation: sequential_upward .3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes slowGone {
+    from{
+        top:30%;
+    }
+    to{
+        top: 130%;
+    }
+}
+.slowGone{
+    animation: slowGone .3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes slow_reverse_Gone {
+    from{
+        top:130%;
+    }
+    to{
+        top: 30%;
+    }
+}
+.slow_reverse_Gone{
+    animation: slow_reverse_Gone .3s both linear ;
+    animation-fill-mode: forwards;
+}
+/******第四页面跳转第三页面时第三页面三个模块顺序向上移动动画*******/
+@keyframes sequential_reverse_upward {
+    from{
+        margin-top: -100%;
+    }
+    to{
+        margin-top: 0;
+    }
+}
+.sequential_reverse_upward{
+    animation: sequential_reverse_upward .3s both linear ;
+    animation-fill-mode: forwards;
+}
+/********第四页面中盒子下落动画,且落地后打开箱子动画*********/
+@keyframes fallDown {
+    from{
+        margin-top: -125px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 100px;
+    }
+}
+.fallDown{
+    animation: fallDown 0.3s  linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes wordsUp {
+    from{
+        opacity: 0;
+        top: -220px;
+    }
+    to{
+        opacity: 1;
+        top: -200px;
+    }
+}
+.wordsUp{
+    animation: wordsUp .3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes openBox-L {
+    from{
+        transform: rotateX(90deg) translateZ(60px) rotateY(0deg);
+    }
+    to{
+        transform: rotateX(90deg) translateZ(60px) rotateY(-120deg);
+    }
+}
+.openBox-L{
+    animation: openBox-L .3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes openBox-R {
+    from{
+        transform: translateX(60px) rotateX(90deg) translateZ(60px) rotateY(0deg);
+    }
+    to{
+        transform: translateX(60px) rotateX(90deg) translateZ(60px) rotateY(120deg);
+    }
+}
+.openBox-R{
+    animation: openBox-R .3s both linear ;
+    animation-fill-mode: forwards;
+}
+/************第五页面向上滑动动画效果************/
+@keyframes nextpage {
+    from{
+        top: 100%;
+    }
+    to{
+        top: 0;
+    }
+}
+.nextpage{
+    animation: nextpage .3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes reverse_nextpage {
+    from{
+        top: 0;
+    }
+    to{
+        top: 100%;
+    }
+}
+.reverse_nextpage{
+    animation: reverse_nextpage .3s both linear ;
+    animation-fill-mode: forwards;
+}
+/***********第五页面文字浮动出现效果*********/
+@keyframes wordsShow {
+    from{
+        opacity: 0;
+        top: 50px;
+    }
+    to{
+        opacity: 1;
+        top: 0;
+    }
+}
+.wordsShow{
+    animation: wordsShow .3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes likesUp {
+    from{
+        top: 85%;
+    }
+    to{
+        top: 80%;
+    }
+}
+.likesUp{
+    animation: likesUp .3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes smileEye {
+    from{
+        transform: rotateX(0);
+    }
+    50%{
+        transform: rotateX(45deg);
+    }
+    to{
+        transform: rotateX(0);
+    }
+}
+.smileEye{
+    animation: smileEye .3s both linear ;
+    animation-fill-mode: forwards;
+}
+@keyframes smileMouse {
+    from{
+        transform: rotateZ(0);
+    }
+    50%{
+        transform: rotateZ(-10deg);
+    }
+    to{
+        transform: rotateZ(0);
+    }
+}
+.smileMouse{
+    animation: smileMouse .3s both linear ;
+    animation-fill-mode: forwards;
+}

@@ -1,0 +1,547 @@
+html,body{
+    /*position: relative;*/
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    /*background-color: black;*/
+}
+a{
+    text-decoration-line: none;
+}
+ul li{
+    list-style: none;
+}
+#navbar{
+    position: fixed;
+    padding: 18px 0 0;
+    width: 100%;
+    height: 44px;
+    background-color: transparent;
+    z-index: 100;
+    /*display: none;*/
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+#right-tag>span{
+    font-family: icomoon!important;
+}
+#left-logo{
+    display: block;
+    float: left;
+    padding-left: 30px;
+}
+#left-logo>a{
+    color: black;
+}
+#right-tag{
+    display: block;
+    float: right;
+    height: 30px;
+    padding-right: 30px;
+    font-size: 0;
+}
+#left-logo>a::before{
+    font-family: icomoon;
+    content: "\e614";
+    font-size: 24px;
+    color: inherit;
+    line-height: 24px;
+    transition-duration: 0.5s;
+}
+#right-tag>span{
+    font-size: 30px;
+    display: inline-block;
+    height: 30px;
+}
+#right-tag>ul{
+    display: inline-block;
+    padding: 0;
+    height: 30px;
+    vertical-align: top;
+}
+#right-tag>ul>li{
+    display: inline-block;
+    line-height: 30px;
+    margin: 0 8px;
+    color: black;
+}
+#right-tag>ul>li>a{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    color: inherit;
+    font-family: icomoon;
+    margin-right: 6px;
+    border-bottom: 1px solid transparent;
+    transition-duration: 0.5s;
+}
+#right-tag>ul>li>i{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    top:12px;
+    margin-right: 8px;
+    color: black;
+}
+#right-tag>ul>li>i::before{
+    content: '\e644';
+    font-family: icomoon;
+    font-size: 16px;
+    color: inherit;
+}
+#right-tag>ul>li>a:hover{
+    border-bottom-color: inherit;
+}
+/********************打开网页加载动画***********************/
+article{
+    height: 100%;
+    width: 100%;
+}
+#load-page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+#load-page>div{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: #ffd200;
+    z-index: 9;
+}
+#load-page>div>span{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image:url("../img/loading-Home.gif");
+    background-size: 100% 100%;
+    border-radius: 50%;
+    z-index: 10;
+}
+/*****************第一个页面(包含飞机)*****************/
+#first-page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*display: none;*/
+}
+#plane{/********飞机整体大小随窗口改变而改变,占整体50%*******/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%,-50%);
+    width: 50%;
+    perspective: 800px;
+}
+#plane-body{
+    position: absolute;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+}
+#propeller{
+    position: absolute;
+    max-width: 30%;
+    top: 51.7003%;
+    left: 11.5%;
+    animation: rotate 0.15s both linear infinite;
+    animation-fill-mode: forwards;
+}
+/*****************打字机效果********************/
+#Typewriter{
+    position: absolute;
+    left: 30px;
+    bottom:0px;
+    white-space: pre;
+}
+#Typewriter>pre{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    font-size: 24px;
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    color: #333;
+}
+/********************second-page第二个界面****************************/
+#second-page,#third-page,#fourth-page,#fifth-page,#sixth-page{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: none;
+    font-size: 0;
+}
+#second-page>div,#third-page>div{
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    color: white;
+    vertical-align: top;
+    overflow: hidden;
+}
+#second-page>.left{
+    background-color: #05abbf;
+    font-size: 24px;
+}
+/*第二页面和第三页面中字体图标以及文字模块设置透明不可见*/
+#second-page>.left>div,#second-page>.middle>div,#second-page>.right>div{
+    opacity: 0;
+}
+#second-page>div>div,#third-page>div>div{
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+}
+#second-page>div>div>p,#third-page>div>div>p{
+    margin: 60px 0 30px;
+}
+#second-page>div>div>span,#third-page>div>div>span{
+    display: block;
+    font-size: 20px;
+}
+#second-page>.left>div>i::before{
+    content: '\e611';
+    font-family: icomoon;
+    font-style: normal;
+    font-size: 4em;
+}
+#second-page>.middle{
+    background-color: #5e5ae2;
+    font-size: 24px;
+}
+#second-page>.middle>div>i::before{
+    content: '\e621';
+    font-family: icomoon;
+    font-style: normal;
+    font-size: 4em;
+}
+#second-page>.right{
+    background-color: #363b3d;
+    font-size: 24px;
+}
+#second-page>.right>div>i::before{
+    content: '\e60a';
+    font-family: icomoon;
+    font-style: normal;
+    font-size: 4em;
+}
+/********************third-page第三个界面****************************/
+#third-page{
+    background-color: transparent;
+}
+#third-page>.left{
+    background-color: #f8664e;
+    font-size: 24px;
+}
+#third-page>.left>div>i::before{
+    content: '\e60c';
+    font-family: icomoon;
+    font-style: normal;
+    font-size: 4em;
+}
+#third-page>.middle{
+    background-color: #f2ab13;
+    font-size: 24px;
+}
+#third-page>.middle>div>i::before{
+    content: '\e610';
+    font-family: icomoon;
+    font-style: normal;
+    font-size: 4em;
+}
+#third-page>.right{
+    background-color: #8eb131;
+    font-size: 24px;
+}
+#third-page>.right>div>i::before{
+    content: '\e616';
+    font-family: icomoon;
+    font-style: normal;
+    font-size: 4em;
+}
+/***********************第四页面**************************/
+#fourth-page{
+    background-color: #414859;
+    display: none;
+}
+#fourth-page header{
+    display: block;
+    width: 100%;
+    font-size: 44px;
+    font-family: 'Roboto Slab';
+    height: 44px;
+    color: white;
+    margin-bottom: 80px;
+    text-align: center;
+}
+#allBox{
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.box{
+    position: relative;
+    top: 0;
+    opacity: 0;
+    width: 20%;
+    font-size: 20px;
+}
+.words{
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+}
+.words>span{
+    width: 150px;
+    display: block;
+    color: white;
+    margin: auto;
+}
+.words>i{
+    display: block;
+    font-family: 'icomoon';
+    font-style: normal;
+    text-align: center;
+    margin: 60px auto;
+    color: white;
+    font-size: 36px;
+}
+.Box-detail{
+    margin: 100px auto 0;
+    width: 120px;
+    position: relative;
+    bottom: 0;
+    transform-style: preserve-3d;
+    perspective: 1500px;
+    transform: rotateY(-40deg) rotateX(-4deg) rotateZ(4deg);
+}
+.boxsize{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #0390A1;
+}
+.B-face{
+    transform: translateZ(60px);
+    border: 1px solid #3f515f;
+    font-family: 'icomoon';
+    text-align: center;
+    font-size: 65px;
+    line-height: 120px;
+    color: white;
+}
+.B-back{
+    transform: translateZ(-60px);
+    border: 1px solid #3f515f;
+}
+.B-left{
+    transform: translateX(-60px) rotateY(90deg);
+    border: 1px solid #3f515f;
+}
+.B-right{
+    width: 100px;
+    height: 100px;
+    transform: translateX(60px) rotateY(90deg);
+    border: 1px solid #3f515f;
+    padding: 10px;
+    color: #414859;
+    font-size: 20px;
+    font-weight: 700;
+}
+.B-top-R,.B-top-L{
+    width:60px;
+    height: 120px;
+}
+.B-top-L{
+    transform-origin:left center;
+    transform: rotateX(90deg) translateZ(60px) rotateY(0deg);
+}
+.B-top-R{
+    transform-origin:right center;
+    transform: translateX(60px) rotateX(90deg) translateZ(60px) rotateY(0deg);
+}
+/**********************第五页面*************************/
+#fifth-page{
+    background-color: #3c81df;
+    display: none;
+    font-size: 22px;
+    text-align: center;
+    transition-duration: 0.3s;
+}
+#fifth-page>header{
+    font-family: 'Roboto Slab';
+    color: white;
+    font-size: 50px;
+    margin: 200px auto 130px;
+    margin-top: 200px;
+}
+#userIcon{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+#userIcon>span{
+    display: block;
+    font-size: 90px;
+    font-family: icomoon;
+    width: 120px;
+    height: 120px;
+    color: white;
+    border: 2px solid white;
+    line-height: 120px;
+    border-radius: 50%;
+    vertical-align: top;
+    margin-bottom: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
+#userIcon>span:nth-child(5){
+    font-size: 50px;
+}
+#userIcon>span:nth-child(1){
+    color: #3c81df;
+    background-color: white;
+}
+#userSay{
+    position: relative;
+    margin: 0 20px;
+    /*width: 100%;*/
+    font-size: 20px;
+    color: white;
+}
+#userSay>p{
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+}
+#userSay>p:nth-child(1){
+    opacity: 1;
+}
+@media screen and (min-width:1680px) {
+    #second-page>div>div>span,#third-page>div>div>span{
+        font-size:16px;
+    }
+    #allBox{
+        width: 1440px;
+    }
+    #fourth-page header{
+        font-size: 66px;
+        height: 66px;
+    }
+    .words>span{
+        width: 170px;
+        font-size: 22px;
+        font-weight: 400;
+    }
+    #userIcon{
+        width: 70%;
+    }
+    #userIcon>span{
+        width: 180px;
+        height: 180px;
+        line-height: 180px;
+    }
+    #fifth-page>header{
+        font-size: 80px;
+    }
+    #userSay>p{
+        font-size: 28px;
+        width: 70%;
+    }
+}
+/*********************第六页面*************************/
+#sixth-page{
+    background-color: #ffd200;
+    font-family: icomoon;
+    /*display: block;*/
+}
+#TypewriterDown2{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#TypewriterDown2>i{
+    font-size: 80px;
+    font-style: normal;
+    margin: 0 2px;
+}
+#Likes{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+#Likes>div{
+    display: inline-block;
+}
+.Likes1{
+    height: 60px;
+    width: 17px;
+    font-size: 60px;
+    /*margin-right: -20px;*/
+}
+.Likes2{
+    font-size: 28px;
+    line-height: 60px;
+    height: 60px;
+    margin: 0 5px;
+    vertical-align: top;
+}
+.Likes3{
+    height: 60px;
+    width: 17px;
+    font-size: 60px;
+    /*margin-right: 20px;*/
+}
+#TypewriterDown2>.down{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+#smile{
+    width: 28px;
+}
+#smile>span:nth-child(3){
+    display: block;
+    font-size: 12px;
+    margin-top: -50px;
+    margin-left: -10px;
+    text-align: center;
+}
+.likesWidening{
+    margin: 0 10px;
+    transition-duration: 0.3s;
+}
+.smileUp{
+    margin-top:-60px;
+    transition-duration: 0.3s;
+}
